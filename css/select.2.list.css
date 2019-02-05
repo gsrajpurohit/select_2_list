@@ -1,0 +1,65 @@
+
+/*
+ * LIST CSS
+*/
+select.gs-selectbox {
+    display: none;
+}
+
+.dd-list-wrapper {
+    position: relative;
+}
+
+.dd-list-wrapper .dd-list-handler {
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    border: 1px solid #ccc;
+}
+
+.dd-list-wrapper .dd-list-handler::after {
+    content: "\25bc";
+    /*width: 25px;*/
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    padding: 8px 6px;
+    color: #a0a0a0;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+/*.dd-list-wrapper .dd-list-handler:hover::after {
+    background-color: #c00;
+    color: #fff;
+}*/
+
+.dd-list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ccc;
+    display: none;
+    margin-top: -1px;
+}
+
+.dd-list li {
+    background-color: #fff;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.dd-list li:hover,
+.dd-list li.active {
+    background-color: #f0f0f0;
+}
+
