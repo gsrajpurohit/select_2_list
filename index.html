@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Select to List - The Plugin</title>
+    <link rel="stylesheet" type="text/css" href="css/select.2.list.css" />
+</head>
+
+<body>
+    <div class="multi col-sm-4" id="multi">
+        <select class="gs-selectbox" id="gs-selectbox">
+            <option value="">Select</option>
+            <option value="1">First Text</option>
+            <option value="2">Second Text</option>
+            <option value="3">Third Text</option>
+            <option value="4">Forth Text</option>
+            <option value="5">Fifth Text</option>
+            <option value="6">Sixth Text</option>
+        </select>
+    </div>
+    <div class="wrapper">
+        <button class="" id="get_values">Get Selected Values &#8601;</button>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/select.2.list.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        $('#get_values').on('click', function(event) {
+            alert($.selectedVal);
+        })
+
+        $.selectedVal = '';
+        $('.gs-selectbox').select_2_list({
+            easing_time: 500,
+            max_height: 150,
+            selected_text: 'Select An Option',
+            onSelect: function(values) {
+                $.selectedVal = values;
+            }
+        })
+
+    })
+    </script>
+</body>
+
+</html>
